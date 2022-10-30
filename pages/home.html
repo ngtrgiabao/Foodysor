@@ -1,12 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="../styles/index.css"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <nav class="h-40 bg-cyan-50 px-10 pt-10">
+            <div class="flex justify-between">
+                <div class="flex">
+                    <span>
+                        <img
+                            class="w-40"
+                            src="../assets/images/normal.svg"
+                            alt=""
+                        />
+                    </span>
+
+                    <div class="ml-16">
+                        <a href="#" class="text-blue-300 font-bold">Blog</a>
+                        <a href="#" class="text-blue-300 font-bold ml-4"
+                            >Help</a
+                        >
+                    </div>
+                </div>
+                <div class="animate__animated animate__backInRight">
+                    <a href="#" class="d-[block] bg-white p-3 rounded">
+                        Already have an account?Login
+                    </a>
+                    <a
+                        href="#"
+                        class="bg-black text-white font-bold p-2 rounded-full"
+                        >Sign up</a
+                    >
+                </div>
+            </div>
+            <div class="mt-5"></div>
+        </nav>
+    </body>
 </html>
