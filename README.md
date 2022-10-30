@@ -13,3 +13,4 @@
 
 ## Cấu hình để sử dụng 
 - Cần cài đặt Framework Tailwind để mang đến trải nghiệm tốt nhất.
+- s
