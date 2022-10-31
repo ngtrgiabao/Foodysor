@@ -61,4 +61,3 @@ row2.innerHTML = blogList
                     </div>`
     )
     .join("");
-// s
