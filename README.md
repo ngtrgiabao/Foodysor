@@ -1,6 +1,6 @@
 # Giới thiệu
 
-**Foodysor** là một web app chuyên bán cho người dùng những loại thực phẩm tốt cho sức khỏe.
+**Foodysor** là một web app mang đến cho người dùng những loại hamburger hảo hạng.
 
 ***
 
