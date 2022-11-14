@@ -47,7 +47,7 @@ const row2 = document.querySelector(".rows-2");
 
 row2.innerHTML = blogList
     .map(
-        (item) => `<div class="flex justify-center m-4">
+        (item) => `<div class="flex justify-center m-4 z-[1]">
                         <div class="rounded-lg shadow-lg bg-white max-w-sm">
                             <a href="#!">
                                 <img class="rounded-t-lg" src=${item.img} alt="../assets/images/banner-trang-khuyen-mai_1_.jpg"/>
