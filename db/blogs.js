@@ -45,7 +45,7 @@ row2.innerHTML = blogList
             item
         ) => `<a href="./chiTietKhuyenMai.html" class="flex justify-center m-4 z-[1]">
                         <div class="rounded-lg shadow-lg bg-white max-w-sm">
-                            <img class="rounded-t-lg" src=${item.img} alt="../assets/images/banner-trang-khuyen-mai_1_.jpg"/>
+                            <img class="rounded-t-lg" src=${item.img} alt="../assets/images/banner-trang-khuyen-mai_1_.jpg" loading="lazy"/>
                         <div class="p-6">
                             <h5 class="text-gray-900 text-xl font-bold mb-2">${item.title}</h5>                            
                         </div>
