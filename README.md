@@ -2,7 +2,7 @@
 
 **Foodysor** là một web app mang đến cho người dùng những loại hamburger hảo hạng.
 
----
+***
 
 ## Folder trong dự án
 
@@ -11,6 +11,5 @@
 **script**: nơi chứa các việc xử lý trong JavaScript.\
 **styles**: nơi chứa các tệp css (nếu như sử dụng Tailwind, vui lòng bỏ qua folder này).
 
-## Cấu hình để sử dụng
-
+## Cấu hình để sử dụng 
 - Cần cài đặt Framework Tailwind để mang đến trải nghiệm tốt nhất.
