@@ -75,7 +75,7 @@
                     </a>
                     <a
                         href="./dangKy.html"
-                        class="ml-2 bg-black text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
+                        class="ml-2 bg-orange-500 text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
                         >Đăng ký</a
                     >
                 </div>
@@ -126,51 +126,109 @@
                         alt=""
                     />
 
-                    <p class="text-5xl font-bold">Khuyến Mãi</p>
+                    <p class="text-5xl font-bold">Đăng Ký</p>
                 </div>
             </span>
         </nav>
 
-        <main class="blog-container py-14 bg-orange-300">
+        <main class="blog-container pt-14 bg-orange-300">
             <div
-                class="row-1 flex justify-center animate__animated animate__zoomIn"
+                class="flex flex-col items-center justify-center py-8 mx-auto lg:py-0 animate__animated animate__bounceInRight"
             >
-                <div
-                    class="overflow-hidden rounded-lg shadow-xl w-full mx-32 grid grid-flow-col auto-cols-fr bg-white"
-                >
-                    <img
-                        class="w-full object-cover"
-                        src="../assets/images/top-3-hamburger.jpg"
-                        alt=""
-                    />
-                    <div class="p-5 col-span-2">
-                        <h3 class="font-bold text-3xl">
-                            Top 3 hamburger bán chạy nhất tại cửa hàng.
-                        </h3>
-                        <span class="opacity-75">3 ngày trước</span>
-                        <p class="desc mt-2 dot">
-                            Những ai từng thử qua bánh mì thanh long chắc hẳn
-                            đều biết nó có vị ngọt hơn loại thông thường nhờ vào
-                            lượng đường tự nhiên đến từ ruột quả thanh long đỏ.
-                            Lớp bánh bun thanh long lần này cũng vậy. Khi ăn bạn
-                            sẽ dễ dàng cảm nhận được vị ngọt của lớp vỏ bánh màu
-                            hồng, vị mằn mặn của nhân tôm - gà quay flava hay
-                            miếng thịt zinger kết hợp cùng một ít độ chua - cay
-                            nồng của các loại nước sốt, rau xà lách, cà chua và
-                            ớt chuông bên trong
-                        </p>
-                        <a
-                            href="./chiTietKhuyenMai.html"
-                            class="inline-block px-2 py-2 bg-orange-600 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out mt-10 cursor-pointer"
+                <div class="w-full space-y-4 px-[14rem] py-[5rem]">
+                    <h1
+                        class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
+                    >
+                        Đăng ký tài khoản
+                    </h1>
+                    <form class="space-y-4 md:space-y-6 w-full" action="#">
+                        <div>
+                            <label
+                                for="email"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >Email của bạn</label
+                            >
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                placeholder="name@company.com"
+                                required=""
+                            />
+                        </div>
+                        <div>
+                            <label
+                                for="password"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >Mật khẩu</label
+                            >
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required=""
+                            />
+                        </div>
+                        <div>
+                            <label
+                                for="confirm-password"
+                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                >Xác nhận mật khẩu</label
+                            >
+                            <input
+                                type="confirm-password"
+                                name="confirm-password"
+                                id="confirm-password"
+                                placeholder="••••••••"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                required=""
+                            />
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex items-center h-5">
+                                <input
+                                    id="terms"
+                                    aria-describedby="terms"
+                                    type="checkbox"
+                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                                    required=""
+                                />
+                            </div>
+                            <div class="ml-3 text-sm">
+                                <label
+                                    for="terms"
+                                    class="font-light text-gray-500 dark:text-gray-300"
+                                    >Tôi đồng ý với
+                                    <a
+                                        class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                        href="./dieuKhoan.html"
+                                        >Điều khoản và chính sách</a
+                                    ></label
+                                >
+                            </div>
+                        </div>
+                        <button
+                            type="submit"
+                            class="w-full text-white bg-orange-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center hover:bg-orange-400"
                         >
-                            Xem Thêm
-                        </a>
-                    </div>
+                            Đăng ký tài khoản
+                        </button>
+                        <p
+                            class="text-sm font-light text-gray-500 dark:text-gray-400"
+                        >
+                            Đã có tài khoản?
+                            <a
+                                href="./dangNhap.html"
+                                class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                >Đăng nhập ở đây</a
+                            >
+                        </p>
+                    </form>
                 </div>
             </div>
-            <div
-                class="rows-2 mt-2 flex flex-wrap justify-center animate__animated animate__bounceInLeft"
-            ></div>
         </main>
 
         <!-- FOOTER -->
@@ -381,5 +439,4 @@
             </div>
         </footer>
     </body>
-    <script src="../db/blogs.js"></script>
 </html>
