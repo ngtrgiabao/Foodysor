@@ -126,51 +126,175 @@
                         alt=""
                     />
 
-                    <p class="text-5xl font-bold">Khuyến Mãi</p>
+                    <p class="text-5xl font-bold">Thanh Toán</p>
                 </div>
             </span>
         </nav>
 
-        <main class="blog-container py-14 bg-orange-300">
-            <div
-                class="row-1 flex justify-center animate__animated animate__zoomIn"
-            >
+        <main class="blog-container pt-14 bg-orange-300">
+            <div class="w-full grid grid-cols-2 gap-4">
+                <!-- FORM -->
                 <div
-                    class="overflow-hidden rounded-lg shadow-xl w-full mx-32 grid grid-flow-col auto-cols-fr bg-white"
+                    class="p-6 sm:rounded-md animate__animated animate__bounceInLeft"
                 >
-                    <img
-                        class="w-full object-cover"
-                        src="../assets/images/top-3-hamburger.jpg"
-                        alt=""
-                    />
-                    <div class="p-5 col-span-2">
-                        <h3 class="font-bold text-3xl">
-                            Top 3 hamburger bán chạy nhất tại cửa hàng.
-                        </h3>
-                        <span class="opacity-75">3 ngày trước</span>
-                        <p class="desc mt-2 dot">
-                            Những ai từng thử qua bánh mì thanh long chắc hẳn
-                            đều biết nó có vị ngọt hơn loại thông thường nhờ vào
-                            lượng đường tự nhiên đến từ ruột quả thanh long đỏ.
-                            Lớp bánh bun thanh long lần này cũng vậy. Khi ăn bạn
-                            sẽ dễ dàng cảm nhận được vị ngọt của lớp vỏ bánh màu
-                            hồng, vị mằn mặn của nhân tôm - gà quay flava hay
-                            miếng thịt zinger kết hợp cùng một ít độ chua - cay
-                            nồng của các loại nước sốt, rau xà lách, cà chua và
-                            ớt chuông bên trong
-                        </p>
-                        <a
-                            href="./chiTietKhuyenMai.html"
-                            class="inline-block px-2 py-2 bg-orange-600 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out mt-10 cursor-pointer"
+                    <form method="get" action="./home.html">
+                        <label class="flex flex-col mb-6">
+                            <span class="text-gray-700 font-bold"
+                                >Tên của bạn
+                                <span class="text-red-500">*</span>
+                            </span>
+                            <input
+                                class="p-1 rounded-md"
+                                name="name"
+                                type="text"
+                                class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                placeholder="Nguyễn Văn A"
+                            />
+                        </label>
+                        <label class="flex flex-col mb-6">
+                            <span class="text-gray-700 font-bold"
+                                >Địa chỉ email</span
+                            >
+                            <input
+                                class="p-1 rounded-md"
+                                name="email"
+                                type="email"
+                                class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                placeholder="nguyenvana@gmail.com"
+                            />
+                        </label>
+                        <label class="mb-6 flex flex-col">
+                            <span class="text-gray-700 font-bold"
+                                >Điện thoại
+                                <span class="text-red-500">*</span>
+                            </span>
+                            <input
+                                class="p-1 rounded-md"
+                                name="phonenumber"
+                                type="tel"
+                                class="block w-full mt-1 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                            />
+                        </label>
+                        <label class="mb-6 flex flex-col">
+                            <span class="text-gray-700 font-bold"
+                                >Địa chỉ
+                                <span class="text-red-500">*</span>
+                            </span>
+                            <textarea
+                                class="rounded-md"
+                                name="diachi"
+                                id="diachi"
+                                cols="30"
+                                rows="10"
+                            ></textarea>
+                        </label>
+                        <div class="mb-6">
+                            <input
+                                type="submit"
+                                class="h-10 px-5 text-orange-100 bg-orange-700 rounded-lg transition-colors duration-150 focus:shadow-outline hover:bg-orange-400"
+                                value="Xác nhận đơn hàng"
+                            />
+                        </div>
+                    </form>
+                </div>
+
+                <!-- GIO HANG -->
+                <div class="animate__animated animate__bounceInRight">
+                    <div class="flex flex-col pr-5">
+                        <div
+                            class="w-full bg-amber-700 flex flex-col items-center text-white font-bold p-3"
                         >
-                            Xem Thêm
-                        </a>
+                            <span>THỜI GIAN DỰ KIẾN NHẬN HÀNG</span>
+                        </div>
+
+                        <div>
+                            <div class="p-5 border">
+                                <select name="time" id="times" class="p-3">
+                                    <option value="">
+                                        Ngay bây giờ (càng nhanh càng tốt)
+                                    </option>
+                                    <option value="">20:41</option>
+                                    <option value="">20:45</option>
+                                    <option value="">21:00</option>
+                                    <option value="">21:15</option>
+                                    <option value="">21:30</option>
+                                    <option value="">21:45</option>
+                                    <option value="">22:00</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid grid-rows-2 pr-5 mt-5">
+                        <div class="bg-white">
+                            <div
+                                class="w-full bg-amber-700 flex flex-col items-center text-white font-bold p-3"
+                            >
+                                <span>XEM LẠI ĐƠN HÀNG</span>
+                            </div>
+                            <div
+                                class="grid grid-cols-4 place-items-center bg-orange-200 p-3"
+                            >
+                                <div>Tên sản phẩm</div>
+                                <div>Đơn giá</div>
+                                <div>Số lượng</div>
+                                <div>Thành tiền</div>
+                            </div>
+                            <div
+                                class="grid grid-cols-4 place-items-center bg-white p-4"
+                            >
+                                <div>BURGER THAN TRE (CỠ LỚN)</div>
+                                <div class="text-orange-500">
+                                    <span> 129.000 VND </span>
+                                </div>
+                                <div>1</div>
+                                <div class="text-orange-500">
+                                    <span> 129.000 VND </span>
+                                </div>
+                            </div>
+                            <div>
+                                <div
+                                    class="flex justify-between px-6 py-2 border"
+                                >
+                                    <div><span>Tạm tính</span></div>
+                                    <div
+                                        class="text-orange-500 font-bold pr-[3.5rem]"
+                                    >
+                                        <span> 129.000 VND </span>
+                                    </div>
+                                </div>
+                                <div class="px-6 pr-[34rem]">
+                                    <p>
+                                        Áp dụng phí giao hàng đồng giá 15k/đơn
+                                        đối với đơn hàng có ưu đãi " Mua 1 tặng
+                                        1 thứ 3 hàng tuần "
+                                    </p>
+                                </div>
+                                <div class="flex justify-between px-6 py-2">
+                                    <div>
+                                        <span
+                                            >Vận chuyển (Giao Hàng Tận
+                                            Nơi)</span
+                                        >
+                                    </div>
+                                    <div class="text-orange-500 pr-[3.5rem]">
+                                        0 VND
+                                    </div>
+                                </div>
+                                <div class="flex justify-between px-6 py-2">
+                                    <div class="text-3xl font-bold">
+                                        <span>Tổng cộng</span>
+                                    </div>
+                                    <div
+                                        class="text-3xl font-bold text-orange-500 pr-[3.5rem]"
+                                    >
+                                        <span> 129.000 VND </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div
-                class="rows-2 mt-2 flex flex-wrap justify-center animate__animated animate__bounceInLeft"
-            ></div>
         </main>
 
         <!-- FOOTER -->
@@ -381,5 +505,4 @@
             </div>
         </footer>
     </body>
-    <script src="../db/blogs.js"></script>
 </html>
