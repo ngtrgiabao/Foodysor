@@ -37,9 +37,9 @@ const blogList = [
     },
 ];
 
-const row2 = document.querySelector(".rows-2");
+const rows2 = document.querySelector(".rows-2");
 
-row2.innerHTML = blogList
+rows2.innerHTML = blogList
     .map(
         (
             item
