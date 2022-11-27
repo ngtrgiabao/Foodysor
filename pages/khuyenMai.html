@@ -133,43 +133,40 @@
 
         <main class="blog-container py-14 bg-orange-300">
             <div
-                class="row-1 flex justify-center animate__animated animate__zoomIn"
+                class="overflow-hidden rounded-lg shadow-xl sm:mx-16 grid grid-cols-2 bg-white row-1 animate__animated animate__zoomIn"
             >
-                <div
-                    class="overflow-hidden rounded-lg shadow-xl w-full mx-32 grid grid-flow-col auto-cols-fr bg-white"
-                >
+                <div>
                     <img
-                        class="w-full object-cover"
+                        class="w-full h-full object-cover"
                         src="../assets/images/top-3-hamburger.jpg"
                         alt=""
                     />
-                    <div class="p-5 col-span-2">
-                        <h3 class="font-bold text-3xl">
-                            Top 3 hamburger bán chạy nhất tại cửa hàng.
-                        </h3>
-                        <span class="opacity-75">3 ngày trước</span>
-                        <p class="desc mt-2 dot">
-                            Những ai từng thử qua bánh mì thanh long chắc hẳn
-                            đều biết nó có vị ngọt hơn loại thông thường nhờ vào
-                            lượng đường tự nhiên đến từ ruột quả thanh long đỏ.
-                            Lớp bánh bun thanh long lần này cũng vậy. Khi ăn bạn
-                            sẽ dễ dàng cảm nhận được vị ngọt của lớp vỏ bánh màu
-                            hồng, vị mằn mặn của nhân tôm - gà quay flava hay
-                            miếng thịt zinger kết hợp cùng một ít độ chua - cay
-                            nồng của các loại nước sốt, rau xà lách, cà chua và
-                            ớt chuông bên trong
-                        </p>
-                        <a
-                            href="./chiTietKhuyenMai.html"
-                            class="inline-block px-2 py-2 bg-orange-600 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out mt-10 cursor-pointer"
-                        >
-                            Xem Thêm
-                        </a>
-                    </div>
+                </div>
+                <div class="sm:p-5">
+                    <h3 class="font-bold sm:text-lg">
+                        Top 3 hamburger bán chạy nhất tại cửa hàng.
+                    </h3>
+                    <span class="opacity-75">3 ngày trước</span>
+                    <p class="desc mt-2 dot sm:text-xs">
+                        Những ai từng thử qua bánh mì thanh long chắc hẳn đều
+                        biết nó có vị ngọt hơn loại thông thường nhờ vào lượng
+                        đường tự nhiên đến từ ruột quả thanh long đỏ. Lớp bánh
+                        bun thanh long lần này cũng vậy. Khi ăn bạn sẽ dễ dàng
+                        cảm nhận được vị ngọt của lớp vỏ bánh màu hồng, vị mằn
+                        mặn của nhân tôm - gà quay flava hay miếng thịt zinger
+                        kết hợp cùng một ít độ chua - cay nồng của các loại nước
+                        sốt, rau xà lách, cà chua và ớt chuông bên trong
+                    </p>
+                    <a
+                        href="./chiTietKhuyenMai.html"
+                        class="inline-block sm:px-2 sm:py-2 bg-orange-600 text-white sm:text-xs leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out mt-10 cursor-pointer"
+                    >
+                        Xem Thêm
+                    </a>
                 </div>
             </div>
             <div
-                class="rows-2 mt-2 flex flex-wrap justify-center animate__animated animate__bounceInLeft"
+                class="rows-2 mt-2 sm:mx-10 grid grid-cols-3 justify-center animate__animated animate__bounceInLeft"
             ></div>
         </main>
 
@@ -381,5 +378,5 @@
             </div>
         </footer>
     </body>
-    <script src="../db/blogs.js"></script>
+    <script src="../db/khuyenmai.js"></script>
 </html>
