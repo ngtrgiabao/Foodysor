@@ -7,7 +7,7 @@
         <title>Chi Tiết Sản Phẩm</title>
 
         <!-- Link Tailwind CSS -->
-        <link href="../dist/output.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
 
         <!-- Font awaresome -->
         <link
@@ -22,7 +22,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link href="../dist/output.css" rel="stylesheet" />
+        <script src="https://cdn.tailwindcss.com"></script>
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -40,13 +40,36 @@
             href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdealer-communications.com%2Fwp-content%2Fuploads%2F2014%2F05%2Fhamburger.jpg&f=1&nofb=1&ipt=0cc60036864622917f943a0e8eef10e8c27ea8392b3c59fb3c9650a55f6e66ff&ipo=images"
             type="image/x-icon"
         />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../styles/sanpham.css" />
+
         <link rel="stylesheet" href="../styles/product/product.css" />
+
+        <link rel="stylesheet" href="../styles/product/responsive.css">
+
     </head>
     <body>
+        <!-- Phần header mobile -->
+        <header class="header-mobile fixed w-full z-50">
+            <nav class="bg-orange-500">
+                <div onclick="showNavMobile()" class="text-3xl text-white py-4 px-6 inline-block active:brightness-75">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+                <div id="nav-sub" class="h-full flex flex-col">
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./home.html">Trang chủ</a>
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./sanpham.html">Sản phẩm</a>
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangNhap.html">Đăng nhập</a>
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangKy.html">Đăng ký</a>
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./about.html">Về chúng tôi</a>
+                    <a class="text-2xl font-bold text-white px-6 py-4" href="./khuyenMai.html">Khuyến mãi</a>
+                </div>
+            </nav>
+            <a href="./home.html" 
+                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all">
+                Ơ <strong> <u> BURGER </u> </strong>
+            </a>
+        </header>
+
         <!-- Phần header -->
-        <header class="">
+        <header class="header-pc">
             <!-- Navbar -->
 
             <nav class="h-60 bg-orange-200 px-10 pt-10 relative">
@@ -77,13 +100,13 @@
                     </div>
                     <div class="animate__animated animate__bounceInRight">
                         <a
-                            href="#"
+                            href="./dangNhap.html"
                             class="d-[block] bg-white p-2 rounded hover:opacity-80"
                         >
                             Bạn đã có tài khoản? Đăng nhập
                         </a>
                         <a
-                            href="#"
+                            href="./dangKy.html"
                             class="ml-2 bg-black text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
                             >Đăng ký</a
                         >
@@ -140,66 +163,50 @@
                 </span>
             </nav>
         </header>
-        <!-- Kết thúc header -->
 
         <!-- Phần main -->
-        <main>
-            <article
-                class="bg-orange-300 py-24 px-10 grid grid-flow-col grid-cols-2 gap-8"
+        <main class="bg-orange-300 py-24 px-10">
+            <!-- Tiêu đề mobile -->
+            <p class="sm:hidden text-4xl font-bold mb-4">CHI TIẾT SẢN PHẨM</p>
+
+            <!-- Phần Giỏ Hàng Nổi -->
+            <button 
+                onclick="showCart()"
+                class="fixed z-50 text-white text-3xl p-5 bg-orange-600 right-10 bottom-10 rounded-full cursor-pointer hover:scale-105 active:scale-100 active:brightness-75">
+                <div id="quantity"></div>
+                <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+
+            </section>
+
+            <article id="detail"
+                class="grid sm:grid-cols-2 gap-8 grid-cols-1 justify-center"
             >
-                <aside class="flex items-center">
-                    <img
-                        class="rounded-full"
-                        src="../assets/images/burger-thanh-long.png"
-                        alt="burger-thanh-long"
-                    />
-                </aside>
-                <aside class="bg-red-100 p-10 rounded-2xl">
-                    <h1 class="text-3xl font-bold">Burger Than Tre (Cỡ Vừa)</h1>
-                    <p class="font-bold text-slate-600 mt-3">
-                        Burger Than Tre Với Lớp Vỏ Xốp Mềm Được Làm Từ 100% Tinh
-                        Than Tre, Kết Hợp Cùng Lớp Sốt Phô Mai Sánh Min Và Bò
-                        Nướng Lửa Hồng Nhập Khẩu Úc.
-                    </p>
-                    <p class="font-bold mt-10 text-xl mb-2">Số Lượng</p>
-                    <div class="flex justify-between">
-                        <div class="flex h-10 w-40 rounded overflow-hidden">
-                            <input
-                                class="bg-slate-600 w-full text-2xl font-semibold text-white"
-                                type="button"
-                                value="-"
-                            />
-                            <input
-                                class="text-center font-semibold text-xl"
-                                type="number"
-                                min="0"
-                                max="100"
-                                value="1"
-                            />
-                            <input
-                                class="bg-yellow-400 w-full text-2xl font-semibold text-slate-600"
-                                type="button"
-                                value="+"
-                            />
-                        </div>
-                        <p class="text-red-600 font-bold text-2xl">
-                            199000
-                            <span>VND</span>
-                        </p>
-                    </div>
-                    <button
-                        class="bg-orange-400 p-4 my-10 w-full rounded font-bold text-2xl text-white"
-                    >
-                        Thêm vào giỏ hàng
-                    </button>
-                </aside>
+            <!-- Thêm chi tiết sản phẩm bằng JS -->
             </article>
         </main>
-        <!-- Kết thúc main -->
 
-        <!-- Phần footer -->
+        <!-- Phần footer mobile -->
+        <footer class="footer-mobile bg-orange-500 pl-4 pt-4">
+            <div class="text-3xl text-white">
+                <span class="text-black">Liên hệ: </span>
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div>
+                <a href="" class="pr-1">Chính sách</a>
+                <a href="" class="">Điều khoản và dịch vụ</a>
+            </div>
+            <p class="mt-4 text-slate-300">TM & Copyright 2021 O Burger Corporation. All Rights Reserved.</p>
+        </footer>
+
+        <!-- FOOTER -->
         <footer
-            class="relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
+            class="footer-pc relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
         >
             <svg
                 width="100%"
@@ -222,12 +229,19 @@
                             <li
                                 class="border-r-2 border-r-black hover:text-orange-500"
                             >
-                                <a href="./dieuKhoan.html">Chính sách</a>
+                                <a
+                                    href="./dieuKhoan.html"
+                                    class="block w-full pr-2"
+                                    >Chính sách</a
+                                >
                             </li>
                             <li
                                 class="border-r-2 border-r-black hover:text-orange-500"
                             >
-                                <a href="./dieuKhoan.html">
+                                <a
+                                    href="./dieuKhoan.html"
+                                    class="block w-full px-2"
+                                >
                                     Điều khoản dịch vụ
                                 </a>
                             </li>
@@ -397,6 +411,18 @@
                 </div>
             </div>
         </footer>
-        <!-- Kết thúc footer -->
+
+        <!-- Phần giỏ hàng -->
+        <section id="cart-show"></section>
+
+        <!-- Phần JS -->
+        <script src="../db/item.js"></script>
+
+        <script>
+            window.onload = function(){
+                let p = localStorage.getItem('pos');
+                showDetail(p);
+            }
+        </script>
     </body>
 </html>
