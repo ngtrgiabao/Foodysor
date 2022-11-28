@@ -132,10 +132,10 @@
         </nav>
 
         <main class="blog-container pt-14 bg-orange-300">
-            <div class="w-full grid grid-cols-2 gap-4">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-4 sm:flex-col">
                 <!-- FORM -->
                 <div
-                    class="p-6 sm:rounded-md animate__animated animate__bounceInLeft"
+                    class="sm:rounded-md animate__animated animate__bounceInLeft sm:flex sm:justify-center sm:flex-col sm:px-6"
                 >
                     <form method="get" action="./home.html">
                         <label class="flex flex-col mb-6">
@@ -188,10 +188,10 @@
                                 rows="10"
                             ></textarea>
                         </label>
-                        <div class="mb-6">
+                        <div class="lg:flex lg:items-center mb-6">
                             <input
                                 type="submit"
-                                class="h-10 px-5 text-orange-100 bg-orange-700 rounded-lg transition-colors duration-150 focus:shadow-outline hover:bg-orange-400"
+                                class="sm:h-10 lg:h-14 px-5 text-orange-100 bg-orange-700 rounded-lg transition-colors duration-150 focus:shadow-outline hover:bg-orange-400 sm:w-full hover:cursor-pointer"
                                 value="Xác nhận đơn hàng"
                             />
                         </div>
@@ -200,7 +200,7 @@
 
                 <!-- GIO HANG -->
                 <div class="animate__animated animate__bounceInRight">
-                    <div class="flex flex-col pr-5">
+                    <div class="flex flex-col sm:px-6">
                         <div
                             class="w-full bg-amber-700 flex flex-col items-center text-white font-bold p-3"
                         >
@@ -224,7 +224,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="grid grid-rows-2 pr-5 mt-5">
+                    <div class="sm:px-6 sm:pb-10 mt-5">
                         <div class="bg-white">
                             <div
                                 class="w-full bg-amber-700 flex flex-col items-center text-white font-bold p-3"
@@ -240,7 +240,7 @@
                                 <div>Thành tiền</div>
                             </div>
                             <div
-                                class="grid grid-cols-4 place-items-center bg-white p-4"
+                                class="grid grid-cols-4 place-items-center bg-white sm:pl-6 lg:py-2 md:py-2"
                             >
                                 <div>BURGER THAN TRE (CỠ LỚN)</div>
                                 <div class="text-orange-500">
@@ -248,7 +248,9 @@
                                 </div>
                                 <div>1</div>
                                 <div class="text-orange-500">
-                                    <span> 129.000 VND </span>
+                                    <span class="lg:ml-[4rem] md:ml-[1rem]">
+                                        129.000 VND
+                                    </span>
                                 </div>
                             </div>
                             <div>
@@ -256,13 +258,11 @@
                                     class="flex justify-between px-6 py-2 border"
                                 >
                                     <div><span>Tạm tính</span></div>
-                                    <div
-                                        class="text-orange-500 font-bold pr-[3.5rem]"
-                                    >
+                                    <div class="text-orange-500 font-bold">
                                         <span> 129.000 VND </span>
                                     </div>
                                 </div>
-                                <div class="px-6 pr-[34rem]">
+                                <div class="px-6">
                                     <p>
                                         Áp dụng phí giao hàng đồng giá 15k/đơn
                                         đối với đơn hàng có ưu đãi " Mua 1 tặng
@@ -276,16 +276,14 @@
                                             Nơi)</span
                                         >
                                     </div>
-                                    <div class="text-orange-500 pr-[3.5rem]">
-                                        0 VND
-                                    </div>
+                                    <div class="text-orange-500">0 VND</div>
                                 </div>
                                 <div class="flex justify-between px-6 py-2">
-                                    <div class="text-3xl font-bold">
+                                    <div class="sm:text-2xl font-bold">
                                         <span>Tổng cộng</span>
                                     </div>
                                     <div
-                                        class="text-3xl font-bold text-orange-500 pr-[3.5rem]"
+                                        class="sm:text-2xl font-bold text-orange-500"
                                     >
                                         <span> 129.000 VND </span>
                                     </div>
