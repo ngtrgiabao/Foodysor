@@ -43,7 +43,7 @@ rows2.innerHTML = blogList
     .map(
         (
             item
-        ) => `<a href="./chiTietKhuyenMai.html" class="flex justify-center m-4 z-[1]">
+        ) => `<a href="./chiTietKhuyenMai.html" class="flex justify-center sm:m-4 z-[1]">
                         <div class="rounded-lg shadow-lg bg-white sm:w-[20rem]">
                             <img class="rounded-t-lg" src=${item.img} alt="../assets/images/banner-trang-khuyen-mai_1_.jpg" loading="lazy"/>
                         <div class="p-6">
