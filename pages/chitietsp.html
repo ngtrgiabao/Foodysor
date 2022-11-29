@@ -43,27 +43,59 @@
 
         <link rel="stylesheet" href="../styles/product/product.css" />
 
-        <link rel="stylesheet" href="../styles/product/responsive.css">
-
+        <!-- RESPONSIVE -->
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/sanpham/index.css"
+        />
     </head>
     <body>
         <!-- Phần header mobile -->
-        <header class="header-mobile fixed w-full z-50">
-            <nav class="bg-orange-500">
-                <div onclick="showNavMobile()" class="text-3xl text-white py-4 px-6 inline-block active:brightness-75">
+        <header class="header-mobile fixed w-full z-50 top-0">
+            <nav class="bg-orange-500" aria-label>
+                <div
+                    onclick="showNavMobile()"
+                    class="text-3xl text-white py-4 px-6 inline-block active:brightness-75"
+                >
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div id="nav-sub" class="h-full flex flex-col">
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./home.html">Trang chủ</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./sanpham.html">Sản phẩm</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangNhap.html">Đăng nhập</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangKy.html">Đăng ký</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./about.html">Về chúng tôi</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./khuyenMai.html">Khuyến mãi</a>
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./home.html"
+                        >Trang chủ</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./sanpham.html"
+                        >Sản phẩm</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangNhap.html"
+                        >Đăng nhập</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangKy.html"
+                        >Đăng ký</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./about.html"
+                        >Về chúng tôi</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./khuyenMai.html"
+                        >Khuyến mãi</a
+                    >
                 </div>
             </nav>
-            <a href="./home.html" 
-                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all">
+            <a
+                href="./home.html"
+                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+            >
                 Ơ <strong> <u> BURGER </u> </strong>
             </a>
         </header>
@@ -72,7 +104,7 @@
         <header class="header-pc">
             <!-- Navbar -->
 
-            <nav class="h-60 bg-orange-200 px-10 pt-10 relative">
+            <nav class="h-60 bg-orange-200 px-10 pt-10 relative" aria-label>
                 <div class="flex justify-between">
                     <div
                         class="flex items-center animate__animated animate__bounceInLeft"
@@ -170,25 +202,25 @@
             <p class="sm:hidden text-4xl font-bold mb-4">CHI TIẾT SẢN PHẨM</p>
 
             <!-- Phần Giỏ Hàng Nổi -->
-            <button 
+            <button
                 onclick="showCart()"
-                class="fixed z-50 text-white text-3xl p-5 bg-orange-600 right-10 bottom-10 rounded-full cursor-pointer hover:scale-105 active:scale-100 active:brightness-75">
+                class="fixed z-50 text-white text-3xl p-5 bg-orange-600 right-10 bottom-10 rounded-full cursor-pointer hover:scale-105 active:scale-100 active:brightness-75"
+            >
                 <div id="quantity"></div>
                 <i class="fa-solid fa-cart-shopping"></i>
             </button>
 
-            </section>
-
-            <article id="detail"
+            <article
+                id="detail"
                 class="grid sm:grid-cols-2 gap-8 grid-cols-1 justify-center"
             >
-            <!-- Thêm chi tiết sản phẩm bằng JS -->
+                <!-- Thêm chi tiết sản phẩm bằng JS -->
             </article>
         </main>
 
         <!-- Phần footer mobile -->
-        <footer class="footer-mobile bg-orange-500 pl-4 pt-4">
-            <div class="text-3xl text-white">
+        <footer class="footer-mobile bg-orange-500 p-5">
+            <div class="text-xl text-white font-bold">
                 <span class="text-black">Liên hệ: </span>
                 <a href="">
                     <i class="fa-brands fa-facebook"></i>
@@ -198,10 +230,13 @@
                 </a>
             </div>
             <div>
-                <a href="" class="pr-1">Chính sách</a>
-                <a href="" class="">Điều khoản và dịch vụ</a>
+                <a href="./dieuKhoan.html" class=""
+                    >Chính sách và Điều khoản và dịch vụ</a
+                >
             </div>
-            <p class="mt-4 text-slate-300">TM & Copyright 2021 O Burger Corporation. All Rights Reserved.</p>
+            <p class="mt-4 text-white">
+                TM & Copyright 2021 O Burger Corporation. All Rights Reserved.
+            </p>
         </footer>
 
         <!-- FOOTER -->
@@ -419,10 +454,10 @@
         <script src="../db/item.js"></script>
 
         <script>
-            window.onload = function(){
-                let p = localStorage.getItem('pos');
+            window.onload = function () {
+                let p = localStorage.getItem("pos");
                 showDetail(p);
-            }
+            };
         </script>
     </body>
 </html>

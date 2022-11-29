@@ -145,6 +145,13 @@ function getPos(id) {
     localStorage.setItem("pos", currentPos);
 }
 
+function calPrice(id) {
+    let so = document.getElementById("soluong");
+    let price = document.getElementById("item-price");
+    let currentPos = localStorage.getItem("pos");
+    price.innerHTML = so.value * itemList[currentPos].price;
+}
+
 function showDetail(pos) {
     let num = localStorage.getItem(itemList[pos].id);
     if (num == null) {
@@ -507,13 +514,6 @@ function removeCart(id) {
     upNumberCart(countItem());
     showCart();
     showProduct();
-}
-
-function calPrice(id) {
-    let so = document.getElementById("soluong");
-    let price = document.getElementById("item-price");
-    let currentPos = localStorage.getItem("pos");
-    price.innerHTML = so.value * itemList[currentPos].price;
 }
 
 // Sub nav

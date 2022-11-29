@@ -1,0 +1,24 @@
+@media only screen and (max-width: 640px) {
+    main {
+        padding: 10rem 2rem 2rem;
+        height: 100vh;
+    }
+
+    main > div {
+        place-items: center;
+    }
+
+    main img {
+        width: 10rem;
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    main .title {
+        font-size: 1.5rem;
+    }
+
+    main .khuyenmai-desc {
+        font-size: 0.5rem;
+    }
+}

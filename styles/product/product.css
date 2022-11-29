@@ -1,139 +1,138 @@
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  appearance: none;
-  margin: 0;
+    appearance: none;
+    margin: 0;
 }
-
 
 /* Mon moi */
 .new::after {
-  content: "Mới";
-  width: 50px;
-  height: 50px;
-  background-color: red;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom-left-radius: 25px;
-  border-top-left-radius: 50px;
-  border-bottom-right-radius: 25px;
+    content: "Mới";
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 25px;
 }
 
 #quantity {
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  background-color: rgb(255, 255, 255);
-  color: #000;
-  border-radius: 50%;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  line-height: 32px;
-  font-size: 16px;
-  font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 #cart-modal {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1000;
-  transition: all;
-  animation: fadeIn ease-in-out .3s;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    transition: all;
+    animation: fadeIn ease-in-out 0.3s;
 }
 
 @keyframes fadeIn {
-  from {
-    transform: scale(0.7);
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 #cart-container {
-  transition: all;
-  animation: pushUp linear .3s;
+    transition: all;
+    animation: pushUp linear 0.3s;
 }
 
 @keyframes pushUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .pushLeft {
-  transition: all;
-  animation: pushLeft linear .3s;
+    transition: all;
+    animation: pushLeft linear 0.3s;
 }
 
 .pushRight {
-  transition: all;
-  animation: pushRight linear .3s;
+    transition: all;
+    animation: pushRight linear 0.3s;
 }
 
 @keyframes pushRight {
-  from {
-    transform: translateX(-115%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    from {
+        transform: translateX(-115%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @keyframes pushLeft {
-  from {
-    transform: translateX(115%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    from {
+        transform: translateX(115%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .pushUp {
-  transform: all;
-  animation: pushUp linear .3s;
+    transform: all;
+    animation: pushUp linear 0.3s;
 }
 
 .fadeIn {
-  transform: all;
-  animation: fadeIn ease-in-out .3s;
+    transform: all;
+    animation: fadeIn ease-in-out 0.3s;
 }
 
 /* =================== */
 /* Phần header mô bai */
 #nav-sub {
-  display: none;
+    display: none;
 }
 
 .header-mobile {
-  display: none;
+    display: none;
 }
 
 .title-mobile {
-  display: none;
+    display: none;
 }
 
 .footer-mobile {
-  display: none;
+    display: none;
 }

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 640px) {
+    #nav-sub {
+        display: none;
+    }
+
+    .title-mobile {
+        display: none;
+    }
+
+    .header-pc {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+    }
+}

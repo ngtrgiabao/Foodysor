@@ -15,7 +15,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link href="../dist/output.css" rel="stylesheet" />
+        <!-- FONT AWESOME -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -34,128 +34,181 @@
             type="image/x-icon"
         />
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../styles/blog/blogStyles.css" />
+        <link rel="stylesheet" href="../styles/product/product.css" />
+
+        <!-- RESPONSIVE -->
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/sanpham/index.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/dangky/index.css"
+        />
+
+        <link href="../dist/output.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../styles/khuyenmai/khuyenmai.css" />
 
         <title>Ơ BURGER</title>
     </head>
     <body>
-        <!-- Navbar -->
-        <nav class="h-60 bg-orange-200 px-10 pt-10 relative">
-            <div class="flex justify-between">
+        <!-- Phần header mobile -->
+        <header class="header-mobile fixed w-full z-50 top-0">
+            <nav class="bg-orange-500" aria-label>
                 <div
-                    class="flex items-center animate__animated animate__bounceInLeft"
+                    onclick="showNavMobile()"
+                    class="text-3xl text-white py-4 px-6 inline-block active:brightness-75"
                 >
-                    <a
-                        href="./home.html"
-                        class="text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
-                    >
-                        Ơ <strong> <u> BURGER </u> </strong>
-                    </a>
-
-                    <div class="ml-16">
-                        <a
-                            href="./khuyenMai.html"
-                            class="text-orange-500 font-bold hover:underline p-3.5"
-                            >Khuyến Mãi</a
-                        >
-                        <a
-                            href="#"
-                            class="text-orange-500 font-bold ml-4 hover:underline p-4"
-                            >Help</a
-                        >
-                    </div>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="animate__animated animate__bounceInRight">
+                <div id="nav-sub" class="h-full flex flex-col">
                     <a
-                        href="./dangNhap.html"
-                        class="d-[block] bg-white p-2 rounded hover:opacity-80"
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./home.html"
+                        >Trang chủ</a
                     >
-                        Bạn đã có tài khoản? Đăng nhập
-                    </a>
                     <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./sanpham.html"
+                        >Sản phẩm</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangNhap.html"
+                        >Đăng nhập</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
                         href="./dangKy.html"
-                        class="ml-2 bg-orange-500 text-white font-bold p-2 rounded-full hover:bg-red-400 hover:text-black transition-all"
                         >Đăng ký</a
                     >
-                </div>
-            </div>
-            <div class="mt-5 animate__animated animate__bounceInUp">
-                <div class="flex justify-center">
-                    <div
-                        class="flex justify-around border border-neutral-600 w-96 p-2 rounded"
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./about.html"
+                        >Về chúng tôi</a
                     >
-                        <span class="font-bold">
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./khuyenMai.html"
+                        >Khuyến mãi</a
+                    >
+                </div>
+            </nav>
+
+            <!-- Phần logo -->
+            <a
+                href="./home.html"
+                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+            >
+                Ơ <strong> <u> BURGER </u> </strong>
+            </a>
+        </header>
+
+        <!-- Phần header -->
+        <header class="header-pc">
+            <!-- Navbar -->
+
+            <nav class="h-60 bg-orange-200 px-10 pt-10 relative" aria-label>
+                <div class="flex justify-between">
+                    <div
+                        class="flex items-center animate__animated animate__bounceInLeft"
+                    >
+                        <a
+                            href="./home.html"
+                            class="text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+                        >
+                            Ơ <strong> <u> BURGER </u> </strong>
+                        </a>
+
+                        <div class="ml-16">
                             <a
-                                href="./home.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >Home</a
+                                href="./khuyenMai.html"
+                                class="text-orange-500 font-bold hover:underline p-3.5"
                             >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="./sanpham.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >Menu</a
+                                KHUYẾN MÃI</a
                             >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="./about.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >About us</a
-                            >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="#"
-                                class="hover:underline hover:underline-offset-1"
-                                >Book us</a
-                            >
-                        </span>
+                        </div>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight">
+                        <a
+                            href="./dangNhap.html"
+                            class="d-[block] bg-white p-2 rounded hover:opacity-80"
+                        >
+                            Bạn đã có tài khoản? Đăng nhập
+                        </a>
+                        <a
+                            href="./dangKy.html"
+                            class="ml-2 bg-black text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
+                            >Đăng ký</a
+                        >
                     </div>
                 </div>
-            </div>
-            <span
-                class="absolute bottom-[-2rem] right-3 animate__animated animate__bounceInUp w-full px-7"
-            >
-                <div class="flex items-center justify-between w-full">
-                    <img
-                        class="w-32"
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fburger_sandwich%2Fburger_sandwich_PNG96712.png&f=1&nofb=1&ipt=c29077f4a89625536f75e74976f8417ae7d8622f2ecefef7b5f875f0866ddc27&ipo=images"
-                        alt=""
-                    />
-
-                    <p class="text-5xl font-bold">Đăng Ký</p>
+                <div class="mt-5 animate__animated animate__bounceInUp">
+                    <div class="flex justify-center">
+                        <div
+                            class="flex justify-around border border-neutral-600 w-96 p-2 rounded"
+                        >
+                            <span class="font-bold">
+                                <a
+                                    href="./home.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Trang Chủ</a
+                                >
+                            </span>
+                            <span class="font-bold">
+                                <a
+                                    href="./sanpham.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Sản Phẩm</a
+                                >
+                            </span>
+                            <span class="font-bold">
+                                <a
+                                    href="./about.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Về Chúng Tôi</a
+                                >
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </span>
-        </nav>
+                <span
+                    class="absolute bottom-[-2rem] right-3 animate__animated animate__bounceInUp w-full px-7"
+                >
+                    <div class="flex items-center justify-between w-full">
+                        <img
+                            class="w-32"
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fburger_sandwich%2Fburger_sandwich_PNG96712.png&f=1&nofb=1&ipt=c29077f4a89625536f75e74976f8417ae7d8622f2ecefef7b5f875f0866ddc27&ipo=images"
+                            alt=""
+                        />
 
-        <main class="blog-container pt-14 bg-orange-300">
+                        <p class="text-5xl font-bold">ĐĂNG KÝ</p>
+                    </div>
+                </span>
+            </nav>
+        </header>
+
+        <main class="md:pt-14 bg-orange-300">
             <div
-                class="flex flex-col items-center justify-center py-8 mx-auto lg:py-0 animate__animated animate__bounceInRight"
+                class="flex flex-col items-center justify-center animate__animated animate__bounceInRight"
             >
                 <!-- FORM -->
                 <div
-                    class="w-full space-y-4 px-[14rem] py-[5rem] sm:w-[40rem] sm:px-[8rem] lg:w-[70rem]"
+                    class="w-full lg:px-[14rem] md:pb-[4rem] md:w-[40rem] md:px-[8rem] lg:w-[70rem] form-container"
                 >
-                    <h1
-                        class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white"
-                    >
-                        Đăng ký tài khoản
-                    </h1>
-                    <form class="space-y-4 md:space-y-6 w-full" action="#">
+                    <p class="title md:none">Đăng Ký</p>
+                    <form class="md:space-y-6 w-full" action="#">
                         <div>
                             <label
                                 for="email"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                class="block m hover:cursor-pointer b-2 text-lg text-gray-900 font-bold"
                                 >Email của bạn</label
                             >
                             <input
                                 type="email"
                                 name="email"
                                 id="email"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="name@company.com"
                                 required=""
                             />
@@ -163,7 +216,7 @@
                         <div>
                             <label
                                 for="password"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                class="block hover:cursor-pointer mb-2 text-lg text-gray-900 font-bold"
                                 >Mật khẩu</label
                             >
                             <input
@@ -171,14 +224,14 @@
                                 name="password"
                                 id="password"
                                 placeholder="••••••••"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required=""
                             />
                         </div>
                         <div>
                             <label
                                 for="confirm-password"
-                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                class="block hover:cursor-pointer mb-2 textlg text-gray-900 font-bold"
                                 >Xác nhận mật khẩu</label
                             >
                             <input
@@ -186,7 +239,7 @@
                                 name="confirm-password"
                                 id="confirm-password"
                                 placeholder="••••••••"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 required=""
                             />
                         </div>
@@ -196,17 +249,17 @@
                                     id="terms"
                                     aria-describedby="terms"
                                     type="checkbox"
-                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
+                                    class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
                                     required=""
                                 />
                             </div>
                             <div class="ml-3 text-sm">
                                 <label
                                     for="terms"
-                                    class="font-light text-gray-500 dark:text-gray-300"
+                                    class="font-light hover:cursor-pointer"
                                     >Tôi đồng ý với
                                     <a
-                                        class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                        class="font-bold text-primary-600 hover:underline dark:text-orange-600"
                                         href="./dieuKhoan.html"
                                         >Điều khoản và chính sách</a
                                     ></label
@@ -219,13 +272,11 @@
                         >
                             Đăng ký tài khoản
                         </button>
-                        <p
-                            class="text-sm font-light text-gray-500 dark:text-gray-400"
-                        >
+                        <p class="text-sm font-light text-white">
                             Đã có tài khoản?
                             <a
                                 href="./dangNhap.html"
-                                class="font-medium text-primary-600 hover:underline dark:text-primary-500"
+                                class="font-bold text-orange-800 hover:underline dark:text-primary-500"
                                 >Đăng nhập ở đây</a
                             >
                         </p>
@@ -234,9 +285,30 @@
             </div>
         </main>
 
+        <!-- Phần footer mobile -->
+        <footer class="footer-mobile bg-orange-500 p-5">
+            <div class="text-xl text-white font-bold">
+                <span class="text-black">Liên hệ: </span>
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div>
+                <a href="./dieuKhoan.html" class=""
+                    >Chính sách và Điều khoản và dịch vụ</a
+                >
+            </div>
+            <p class="mt-4 text-white">
+                TM & Copyright 2021 O Burger Corporation. All Rights Reserved.
+            </p>
+        </footer>
+
         <!-- FOOTER -->
         <footer
-            class="relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
+            class="footer-pc relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
         >
             <svg
                 width="100%"
@@ -442,4 +514,7 @@
             </div>
         </footer>
     </body>
+    <script src="../db/item.js"></script>
+    <!-- Link taiwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </html>

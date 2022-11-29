@@ -41,34 +41,65 @@
             type="image/x-icon"
         />
 
-        <link rel="stylesheet" href="../styles/blog/blogStyles.css" />
+        <link rel="stylesheet" href="../styles/product/product.css" />
 
-        <link rel="stylesheet" href="../styles/product/product.css">
-
-        <link rel="stylesheet" href="../styles/product/responsive.css">
+        <!-- RESPONSIVE -->
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/sanpham/index.css"
+        />
 
         <title>Sản Phẩm</title>
     </head>
     <body>
         <!-- Phần header mobile -->
-        <header class="header-mobile fixed w-full z-50">
-            <nav class="bg-orange-500">
-                <div onclick="showNavMobile()" class="text-3xl text-white py-4 px-6 inline-block active:brightness-75">
+        <header class="header-mobile fixed w-full z-50 top-0">
+            <nav class="bg-orange-500" aria-label>
+                <div
+                    onclick="showNavMobile()"
+                    class="text-3xl text-white py-4 px-6 inline-block active:brightness-75"
+                >
                     <i class="fa-solid fa-bars"></i>
                 </div>
                 <div id="nav-sub" class="h-full flex flex-col">
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./home.html">Trang chủ</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./sanpham.html">Sản phẩm</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangNhap.html">Đăng nhập</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./dangKy.html">Đăng ký</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./about.html">Về chúng tôi</a>
-                    <a class="text-2xl font-bold text-white px-6 py-4" href="./khuyenMai.html">Khuyến mãi</a>
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./home.html"
+                        >Trang chủ</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./sanpham.html"
+                        >Sản phẩm</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangNhap.html"
+                        >Đăng nhập</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangKy.html"
+                        >Đăng ký</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./about.html"
+                        >Về chúng tôi</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./khuyenMai.html"
+                        >Khuyến mãi</a
+                    >
                 </div>
             </nav>
 
             <!-- Phần logo -->
-            <a href="./home.html" 
-                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all">
+            <a
+                href="./home.html"
+                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+            >
                 Ơ <strong> <u> BURGER </u> </strong>
             </a>
         </header>
@@ -77,7 +108,7 @@
         <header class="header-pc">
             <!-- Navbar -->
 
-            <nav class="h-60 bg-orange-200 px-10 pt-10 relative">
+            <nav class="h-60 bg-orange-200 px-10 pt-10 relative" aria-label>
                 <div class="flex justify-between">
                     <div
                         class="flex items-center animate__animated animate__bounceInLeft"
@@ -95,11 +126,6 @@
                                 class="text-orange-500 font-bold hover:underline p-3.5"
                             >
                                 KHUYẾN MÃI</a
-                            >
-                            <a
-                                href="#"
-                                class="text-orange-500 font-bold ml-4 hover:underline p-4"
-                                >TRỢ GIÚP</a
                             >
                         </div>
                     </div>
@@ -143,13 +169,6 @@
                                     >Về Chúng Tôi</a
                                 >
                             </span>
-                            <span class="font-bold">
-                                <a
-                                    href="#"
-                                    class="hover:underline hover:underline-offset-1"
-                                    >Đặt Ngay</a
-                                >
-                            </span>
                         </div>
                     </div>
                 </div>
@@ -168,14 +187,17 @@
                 </span>
             </nav>
         </header>
-        
+
         <!-- Phần main -->
         <main class="bg-orange-300 py-24 px-10">
             <!-- Tiêu đề mobile -->
             <p class="sm:hidden text-4xl font-bold mb-4">SẢN PHẨM</p>
 
             <!-- Phần Giỏ Hàng Nổi -->
-            <button onclick="showCart()" class="fixed z-50 text-white text-3xl p-5 bg-orange-600 right-10 bottom-10 rounded-full cursor-pointer hover:scale-105 active:scale-100 active:brightness-75">
+            <button
+                onclick="showCart()"
+                class="fixed z-50 text-white text-3xl p-5 bg-orange-600 right-10 bottom-10 rounded-full cursor-pointer hover:scale-105 active:scale-100 active:brightness-75"
+            >
                 <div id="quantity"></div>
                 <i class="fa-solid fa-cart-shopping"></i>
             </button>
@@ -183,41 +205,66 @@
             <!-- Phần Nội Dung Sản Phẩm -->
             <article class="grid sm:grid-flow-col">
                 <!-- Phần Điều Hướng -->
-                <section class="sm:w-52 w-full font-bold text-lg mr-10 mb-4 pushUp">
-                    <p class="text-2xl mb-4 text-center sm:block hidden">DANH MỤC</p>
+                <section
+                    class="sm:w-52 w-full font-bold text-lg mr-10 mb-4 pushUp"
+                >
+                    <p class="text-2xl mb-4 text-center sm:block hidden">
+                        DANH MỤC
+                    </p>
                     <div class="rounded-xl overflow-hidden shadow">
-                        <button id="mon-moi" onclick="showMonMoi()"
-                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50">
+                        <button
+                            id="mon-moi"
+                            onclick="showMonMoi()"
+                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50"
+                        >
                             <p>Món mới</p>
                         </button>
-                        <button id="burger" onclick="showBurger()"
-                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50">
+                        <button
+                            id="burger"
+                            onclick="showBurger()"
+                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50"
+                        >
                             <p>Burger</p>
                         </button>
-                        <button id="combo" onclick="showCombo()"
-                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50">
+                        <button
+                            id="combo"
+                            onclick="showCombo()"
+                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50"
+                        >
                             <p>Combo</p>
                         </button>
-                        <button id="thuc-uong" onclick="showThucUong()"
-                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50">
+                        <button
+                            id="thuc-uong"
+                            onclick="showThucUong()"
+                            class="block w-full py-2 bg-orange-600 p-4 hover:scale-105 hover:bg-white text-white hover:text-black active:brightness-50"
+                        >
                             <p>Thức uống</p>
                         </button>
                     </div>
                 </section>
-    
+
                 <!-- Phần Thực Đơn -->
                 <section class="text-center">
-                    <div id="item" class="grid grid-flow-row gap-8 sm:grid-cols-3 grid-cols-1">
+                    <div
+                        id="item"
+                        class="grid grid-flow-row gap-8 sm:grid-cols-3 grid-cols-1"
+                    >
                         <!-- Thêm danh sách sản phẩm bằng JS -->
                     </div>
-                    <button id="btn-more" class="bg-white rounded p-2 font-bold mt-10 hover:scale-105 active:brightness-75 active:scale-100" onclick="showMore()">Xem thêm</button>
+                    <button
+                        id="btn-more"
+                        class="bg-white rounded p-2 font-bold mt-10 hover:scale-105 active:brightness-75 active:scale-100"
+                        onclick="showMore()"
+                    >
+                        Xem thêm
+                    </button>
                 </section>
             </article>
         </main>
 
         <!-- Phần footer mobile -->
-        <footer class="footer-mobile bg-orange-500 pl-4 pt-4">
-            <div class="text-3xl text-white">
+        <footer class="footer-mobile bg-orange-500 p-5">
+            <div class="text-xl text-white font-bold">
                 <span class="text-black">Liên hệ: </span>
                 <a href="">
                     <i class="fa-brands fa-facebook"></i>
@@ -227,10 +274,13 @@
                 </a>
             </div>
             <div>
-                <a href="" class="pr-1">Chính sách</a>
-                <a href="" class="">Điều khoản và dịch vụ</a>
+                <a href="./dieuKhoan.html" class=""
+                    >Chính sách và Điều khoản và dịch vụ</a
+                >
             </div>
-            <p class="mt-4 text-slate-300">TM & Copyright 2021 O Burger Corporation. All Rights Reserved.</p>
+            <p class="mt-4 text-white">
+                TM & Copyright 2021 O Burger Corporation. All Rights Reserved.
+            </p>
         </footer>
 
         <!-- FOOTER -->
@@ -448,9 +498,9 @@
         <script src="../db/item.js"></script>
 
         <script>
-            window.onload = function(){
+            window.onload = function () {
                 showProduct();
-            }
+            };
         </script>
     </body>
 </html>

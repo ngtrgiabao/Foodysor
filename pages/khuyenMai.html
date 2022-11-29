@@ -15,7 +15,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link href="../dist/output.css" rel="stylesheet" />
+        <!-- FONT AWESOME -->
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -34,121 +34,177 @@
             type="image/x-icon"
         />
 
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="../styles/blog/blogStyles.css" />
+        <link rel="stylesheet" href="../styles/product/product.css" />
+
+        <!-- RESPONSIVE -->
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/sanpham/index.css"
+        />
+        <link
+            rel="stylesheet"
+            href="../styles/responsive/mobile/khuyenmai/index.css"
+        />
+
+        <link href="../dist/output.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../styles/khuyenmai/khuyenmai.css" />
 
         <title>Ơ BURGER</title>
     </head>
     <body>
-        <!-- Navbar -->
-        <nav class="h-60 bg-orange-200 px-10 pt-10 relative">
-            <div class="flex justify-between">
+        <!-- Phần header mobile -->
+        <header class="header-mobile fixed w-full z-50 top-0">
+            <nav class="bg-orange-500" aria-label>
                 <div
-                    class="flex items-center animate__animated animate__bounceInLeft"
+                    onclick="showNavMobile()"
+                    class="text-3xl text-white py-4 px-6 inline-block active:brightness-75"
                 >
-                    <a
-                        href="./home.html"
-                        class="text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
-                    >
-                        Ơ <strong> <u> BURGER </u> </strong>
-                    </a>
-
-                    <div class="ml-16">
-                        <a
-                            href="./khuyenMai.html"
-                            class="text-orange-500 font-bold hover:underline p-3.5"
-                            >Khuyến Mãi</a
-                        >
-                        <a
-                            href="#"
-                            class="text-orange-500 font-bold ml-4 hover:underline p-4"
-                            >Help</a
-                        >
-                    </div>
+                    <i class="fa-solid fa-bars"></i>
                 </div>
-                <div class="animate__animated animate__bounceInRight">
+                <div id="nav-sub" class="h-full flex flex-col">
                     <a
-                        href="./dangNhap.html"
-                        class="d-[block] bg-white p-2 rounded hover:opacity-80"
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./home.html"
+                        >Trang chủ</a
                     >
-                        Bạn đã có tài khoản? Đăng nhập
-                    </a>
                     <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./sanpham.html"
+                        >Sản phẩm</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./dangNhap.html"
+                        >Đăng nhập</a
+                    >
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
                         href="./dangKy.html"
-                        class="ml-2 bg-black text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
                         >Đăng ký</a
                     >
-                </div>
-            </div>
-            <div class="mt-5 animate__animated animate__bounceInUp">
-                <div class="flex justify-center">
-                    <div
-                        class="flex justify-around border border-neutral-600 w-96 p-2 rounded"
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./about.html"
+                        >Về chúng tôi</a
                     >
-                        <span class="font-bold">
+                    <a
+                        class="text-2xl font-bold text-white px-6 py-4"
+                        href="./khuyenMai.html"
+                        >Khuyến mãi</a
+                    >
+                </div>
+            </nav>
+
+            <!-- Phần logo -->
+            <a
+                href="./home.html"
+                class="block top-2 right-2 absolute text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+            >
+                Ơ <strong> <u> BURGER </u> </strong>
+            </a>
+        </header>
+
+        <!-- Phần header -->
+        <header class="header-pc">
+            <!-- Navbar -->
+            <nav class="h-60 bg-orange-200 px-10 pt-10 relative" aria-label>
+                <div class="flex justify-between">
+                    <div
+                        class="flex items-center animate__animated animate__bounceInLeft"
+                    >
+                        <a
+                            href="./home.html"
+                            class="text-3xl ring-4 ring-orange-900 p-2 rounded hover:ring-orange-500 transition-all"
+                        >
+                            Ơ <strong> <u> BURGER </u> </strong>
+                        </a>
+
+                        <div class="ml-16">
                             <a
-                                href="./home.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >Home</a
+                                href="./khuyenMai.html"
+                                class="text-orange-500 font-bold hover:underline p-3.5"
                             >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="./sanpham.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >Menu</a
+                                KHUYẾN MÃI</a
                             >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="./about.html"
-                                class="hover:underline hover:underline-offset-1"
-                                >About us</a
-                            >
-                        </span>
-                        <span class="font-bold">
-                            <a
-                                href="#"
-                                class="hover:underline hover:underline-offset-1"
-                                >Book us</a
-                            >
-                        </span>
+                        </div>
+                    </div>
+                    <div class="animate__animated animate__bounceInRight">
+                        <a
+                            href="./dangNhap.html"
+                            class="d-[block] bg-white p-2 rounded hover:opacity-80"
+                        >
+                            Bạn đã có tài khoản? Đăng nhập
+                        </a>
+                        <a
+                            href="./dangKy.html"
+                            class="ml-2 bg-black text-white font-bold p-2 rounded-full hover:bg-orange-400 hover:text-black transition-all"
+                            >Đăng ký</a
+                        >
                     </div>
                 </div>
-            </div>
-            <span
-                class="absolute bottom-[-2rem] right-3 animate__animated animate__bounceInUp w-full px-7"
-            >
-                <div class="flex items-center justify-between w-full">
-                    <img
-                        class="w-32"
-                        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fburger_sandwich%2Fburger_sandwich_PNG96712.png&f=1&nofb=1&ipt=c29077f4a89625536f75e74976f8417ae7d8622f2ecefef7b5f875f0866ddc27&ipo=images"
-                        alt=""
-                    />
-
-                    <p class="text-5xl font-bold">Khuyến Mãi</p>
+                <div class="mt-5 animate__animated animate__bounceInUp">
+                    <div class="flex justify-center">
+                        <div
+                            class="flex justify-around border border-neutral-600 w-96 p-2 rounded"
+                        >
+                            <span class="font-bold">
+                                <a
+                                    href="./home.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Trang Chủ</a
+                                >
+                            </span>
+                            <span class="font-bold">
+                                <a
+                                    href="./sanpham.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Sản Phẩm</a
+                                >
+                            </span>
+                            <span class="font-bold">
+                                <a
+                                    href="./about.html"
+                                    class="hover:underline hover:underline-offset-1"
+                                    >Về Chúng Tôi</a
+                                >
+                            </span>
+                        </div>
+                    </div>
                 </div>
-            </span>
-        </nav>
+                <span
+                    class="absolute bottom-[-2rem] right-3 animate__animated animate__bounceInUp w-full px-7"
+                >
+                    <div class="flex items-center justify-between w-full">
+                        <img
+                            class="w-32"
+                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpngimg.com%2Fuploads%2Fburger_sandwich%2Fburger_sandwich_PNG96712.png&f=1&nofb=1&ipt=c29077f4a89625536f75e74976f8417ae7d8622f2ecefef7b5f875f0866ddc27&ipo=images"
+                            alt=""
+                        />
 
-        <main class="blog-container py-14 bg-orange-300">
+                        <p class="text-5xl font-bold">KHUYẾN MÃI</p>
+                    </div>
+                </span>
+            </nav>
+        </header>
+
+        <main class="khuyenmai-container md:py-14 bg-orange-300">
             <div
-                class="overflow-hidden rounded-lg shadow-xl sm:mx-16 grid grid-cols-2 bg-white row-1 animate__animated animate__zoomIn lg:mx-48"
+                class="overflow-hidden rounded-lg shadow-xl md:mx-16 grid md:grid-cols-2 bg-white rows-1 animate__animated animate__zoomIn lg:mx-48"
             >
                 <div>
                     <img
-                        class="sm:w-full sm:h-full object-cover"
+                        class="md:w-full md:h-full object-cover"
                         src="../assets/images/top-3-hamburger.jpg"
                         alt=""
                     />
                 </div>
-                <div class="sm:p-5">
-                    <h3 class="font-bold sm:text-lg lg:text-2xl">
+                <div class="md:p-5 card-header">
+                    <h3 class="font-bold md:text-lg lg:text-2xl">
                         Top 3 hamburger bán chạy nhất tại cửa hàng.
                     </h3>
                     <span class="opacity-75">3 ngày trước</span>
                     <p
-                        class="desc mt-2 dot sm:text-xs lg:text-base lg:text-gray-500"
+                        class="desc mt-2 dot md:text-xs lg:text-base lg:text-gray-500"
                     >
                         Những ai từng thử qua bánh mì thanh long chắc hẳn đều
                         biết nó có vị ngọt hơn loại thông thường nhờ vào lượng
@@ -161,20 +217,41 @@
                     </p>
                     <a
                         href="./chiTietKhuyenMai.html"
-                        class="inline-block sm:px-2 sm:py-2 lg:px-5 lg:mt-24 font-bold bg-orange-600 text-white sm:text-base lg:text-sm leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out mt-10 cursor-pointer"
+                        class="inline-block md:px-2 md:py-2 lg:px-5 lg:mt-24 font-bold bg-orange-600 text-white sm:text-base lg:text-sm leading-tight uppercase rounded shadow-md hover:bg-orange-400 hover:shadow-lg focus:bg-orange-400 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-orange-800 active:shadow-lg transition duration-150 ease-in-out md:mt-10 cursor-pointer"
                     >
                         Xem Thêm
                     </a>
                 </div>
             </div>
             <div
-                class="rows-2 mt-2 sm:mx-10 lg:mx-44 grid grid-cols-3 justify-center animate__animated animate__bounceInLeft"
+                class="rows-2 md:mt-2 md:mx-10 lg:mx-44 grid md:grid-cols-3 justify-center animate__animated animate__bounceInLeft"
             ></div>
         </main>
 
+        <!-- Phần footer mobile -->
+        <footer class="footer-mobile bg-orange-500 p-5">
+            <div class="text-xl text-white font-bold">
+                <span class="text-black">Liên hệ: </span>
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div>
+                <a href="./dieuKhoan.html" class=""
+                    >Chính sách và Điều khoản và dịch vụ</a
+                >
+            </div>
+            <p class="mt-4 text-white">
+                TM & Copyright 2021 O Burger Corporation. All Rights Reserved.
+            </p>
+        </footer>
+
         <!-- FOOTER -->
         <footer
-            class="relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
+            class="footer-pc relative h-[27rem] bg-orange-200 px-10 pt-10 animate__animated animate__bounceInUp"
         >
             <svg
                 width="100%"
@@ -381,4 +458,6 @@
         </footer>
     </body>
     <script src="../db/khuyenmai.js"></script>
+    <!-- Link taiwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </html>

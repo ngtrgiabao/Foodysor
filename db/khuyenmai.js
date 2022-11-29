@@ -43,13 +43,13 @@ rows2.innerHTML = blogList
     .map(
         (
             item
-        ) => `<a href="./chiTietKhuyenMai.html" class="flex justify-center sm:m-4 z-[1]">
-                        <div class="rounded-lg shadow-lg bg-white sm:w-[20rem]">
+        ) => `<a href="./chiTietKhuyenMai.html" class="flex justify-center md:m-4 z-[1]">
+                        <div class="rounded-lg shadow-lg bg-white md:w-[20rem]">
                             <img class="rounded-t-lg" src=${item.img} alt="../assets/images/banner-trang-khuyen-mai_1_.jpg" loading="lazy"/>
-                        <div class="p-6">
-                            <h5 class="text-gray-900 sm:text-sm font-bold ">${item.title}</h5>                            
+                            <div class="md:p-6 khuyenmai-title-card">
+                                <h5 class="text-gray-900 sm:text-sm font-bold ">${item.title}</h5>                            
+                            </div>
                         </div>
-                        </div>
-                    </a>`
+            </a>`
     )
     .join("");
