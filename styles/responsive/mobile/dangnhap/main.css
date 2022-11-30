@@ -1,0 +1,24 @@
+@media only screen and (max-width: 640px) {
+    .container > div {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .container .title {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+    }
+
+    .container .hamburger-img {
+        display: none;
+    }
+
+    .form-container {
+        width: 100%;
+    }
+
+    form .form-forgot-psw {
+        flex-direction: column;
+    }
+}
