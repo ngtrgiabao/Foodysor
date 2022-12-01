@@ -444,7 +444,7 @@ function showCart() {
     });
     cart.innerHTML = `
     <section id="cart-modal" class="flex justify-center items-center">
-        <div id="cart-container" class="bg-white p-5 rounded sm:w-1/2 relative w-11/12 md:w-4/5">
+        <div id="cart-container" class="bg-white p-5 rounded w-11/12 relative md:w-4/5 lg:w-1/2">
             <div
                 onclick="closeCart()"
                 class="absolute top-0 right-2 p-4 rounded-full cursor-pointer text-2xl font-bold">
