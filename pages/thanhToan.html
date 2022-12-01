@@ -129,7 +129,7 @@
                             >
                         </div>
                     </div>
-                    <div class="animate__animated animate__bounceInRight">
+                    <div class="animate__animated animate__bounceInRight md:flex md:justify-center md:items-center">
                         <a
                             href="./dangNhap.html"
                             class="d-[block] bg-white p-2 rounded hover:opacity-80"
@@ -182,7 +182,7 @@
                             alt=""
                         />
 
-                        <p class="text-5xl font-bold">THANH TOÁN</p>
+                        <p class="text-5xl font-bold">SẢN PHẨM</p>
                     </div>
                 </span>
             </nav>
@@ -272,7 +272,7 @@
 
                         <div>
                             <div class="p-5 border">
-                                <select name="time" id="times" class="p-3">
+                                <select name="time" id="times" class="p-3 w-full">
                                     <option value="">
                                         Ngay bây giờ (càng nhanh càng tốt)
                                     </option>
@@ -302,7 +302,9 @@
                                 <div>Số lượng</div>
                                 <div>Thành tiền</div>
                             </div>
-                            <div
+
+                            <div id="pay"></div>
+                            <!-- <div
                                 class="product-info grid grid-cols-4 place-items-center bg-white sm:pl-6 lg:py-2 md:py-2"
                             >
                                 <div>BURGER THAN TRE (CỠ LỚN)</div>
@@ -351,7 +353,8 @@
                                         <span> 129.000 VND </span>
                                     </div>
                                 </div>
-                            </div>
+                            </div> -->
+                        
                         </div>
                     </div>
                 </div>
@@ -590,4 +593,9 @@
     <script src="../db/item.js"></script>
     <!-- Link taiwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        window.onload=function(){
+            showThanhToan();
+        }
+    </script>
 </html>

@@ -1,3 +1,4 @@
+// Phần danh sách các sản phẩm được lưu bằng mảng
 const itemList = [
     {
         id: "item1",
@@ -121,6 +122,7 @@ const itemList = [
     },
 ];
 
+// Hàm dùng để hiển thị sản phẩm
 function showProduct() {
     const items = document.getElementById("item");
     items.innerHTML = itemList
@@ -136,15 +138,21 @@ function showProduct() {
             `
         )
         .join("");
+    
+    // Cập nhật số lượng item trong giỏ
     upNumberCart(countItem());
+
+    // Ẩn item trong trang sanpham
     hideItem();
 }
 
+// Hàm xác định vị trí item khi click vào item và lưu vào localStorage
 function getPos(id) {
     let currentPos = itemList.findIndex((i) => i.id == id);
     localStorage.setItem("pos", currentPos);
 }
 
+// Hàm tính tiền
 function calPrice(id) {
     let so = document.getElementById("soluong");
     let price = document.getElementById("item-price");
@@ -152,6 +160,7 @@ function calPrice(id) {
     price.innerHTML = so.value * itemList[currentPos].price;
 }
 
+// Hàm hiển thị chi tiết từng sản phẩm
 function showDetail(pos) {
     let num = localStorage.getItem(itemList[pos].id);
     if (num == null) {
@@ -209,10 +218,15 @@ function showDetail(pos) {
         </button>
     </aside>
     `;
+    
+    // Cập nhật số lượng vào giỏ hàng
     upNumberCart(countItem());
+
+    // Tính tiền bằng id trong itemList
     calPrice(itemList[pos].id);
 }
 
+// Hàm onclick giảm số lượng
 function giamSoLuong(id) {
     const so = document.getElementById("soluong");
     if (so.value > 1) {
@@ -221,6 +235,7 @@ function giamSoLuong(id) {
     }
 }
 
+// Hàm onclick tăng số lượng
 function tangSoLuong(id) {
     const so = document.getElementById("soluong");
     if (so.value < 100) {
@@ -229,6 +244,7 @@ function tangSoLuong(id) {
     }
 }
 
+// Hàm thêm item vào giỏ hàng
 function addCart(id) {
     const number = parseInt(document.getElementById("soluong").value);
     const name = document.getElementById("title").textContent;
@@ -262,6 +278,7 @@ function addCart(id) {
     upNumberCart(countItem());
 }
 
+// Đếm số lượng item trong localStorage
 function countItem() {
     let count = 0;
     itemList.forEach(function (item) {
@@ -274,13 +291,14 @@ function countItem() {
     return count;
 }
 
+// Cập nhật số trong giỏ hàng
 function upNumberCart(num) {
     let quan = document.getElementById("quantity");
     quan.textContent = num;
 }
 
 // ==============================================================
-
+// Hàm hiển thị item là món mới type=new
 function showMonMoi() {
     let items = document.getElementById("item");
     let posNew = new Array();
@@ -306,6 +324,7 @@ function showMonMoi() {
     hideBtnMore();
 }
 
+// Hàm hiển thị item là Burger type=burger
 function showBurger() {
     let items = document.getElementById("item");
     let posBur = new Array();
@@ -328,9 +347,12 @@ function showBurger() {
     `
         )
         .join("");
+    
+    // Ẩn nút xem thêm
     hideBtnMore();
 }
 
+// Hàm hiển thị món là combo type=combo
 function showCombo() {
     let items = document.getElementById("item");
     let posCom = new Array();
@@ -356,6 +378,7 @@ function showCombo() {
     hideBtnMore();
 }
 
+// Hàm hiển thị món là đồ uống type=drink
 function showThucUong() {
     let items = document.getElementById("item");
     let posThu = new Array();
@@ -381,11 +404,13 @@ function showThucUong() {
     hideBtnMore();
 }
 
+// Hàm ẩn nút Xem Thêm
 function hideBtnMore() {
     let btnShow = document.getElementById("btn-more");
     btnShow.style.display = "none";
 }
 
+// Hàm ẩn item, chỉ show 6 item đầu
 function hideItem() {
     for (let i = 6; i < itemList.length; i++) {
         let item = document.getElementById(itemList[i].id);
@@ -393,6 +418,7 @@ function hideItem() {
     }
 }
 
+// Hàm onclick cho nút Xem Thêm, show toàn bộ item trong itemList
 function showMore() {
     for (let i = 6; i < itemList.length; i++) {
         let item = document.getElementById(itemList[i].id);
@@ -400,7 +426,7 @@ function showMore() {
     }
 }
 
-// Cart
+// Hàm hiển thị trang thông tin giỏ hàng
 function showCart() {
     let cart = document.getElementById("cart-show");
     let posArr = new Array();
@@ -418,7 +444,7 @@ function showCart() {
     });
     cart.innerHTML = `
     <section id="cart-modal" class="flex justify-center items-center">
-        <div id="cart-container" class="bg-white p-5 rounded sm:w-1/2 relative w-11/12">
+        <div id="cart-container" class="bg-white p-5 rounded sm:w-1/2 relative w-11/12 md:w-4/5">
             <div
                 onclick="closeCart()"
                 class="absolute top-0 right-2 p-4 rounded-full cursor-pointer text-2xl font-bold">
@@ -427,7 +453,6 @@ function showCart() {
             <h1 class="text-center text-2xl font-bold text-orange-400 mt-10">GIỎ HÀNG</h1>
             <div id="item-cart" class="mt-10 overflow-y-auto h-72">
                 <!-- item in cart -->
-                
             </div>
             <div class="mt-10">
                 <div class="font-bold text-xl flex justify-between">
@@ -447,6 +472,7 @@ function showCart() {
     showItemCart();
 }
 
+// Hàm hiển thị từng item có trong localStorage lên giỏ hàng
 function showItemCart() {
     let itemCart = document.getElementById("item-cart");
     let posArr = new Array();
@@ -495,6 +521,7 @@ function showItemCart() {
         .join("");
 }
 
+// Hàm chỉnh sửa giỏ hàng
 function modifyCart(id) {
     getPos(id);
     let pos = localStorage.getItem("pos");
@@ -502,11 +529,13 @@ function modifyCart(id) {
     closeCart();
 }
 
+// Hàm đóng giỏ hàng
 function closeCart() {
     let cart = document.getElementById("cart-show");
     cart.innerHTML = "";
 }
 
+// Hàm xóa item trong giỏ hàng
 function removeCart(id) {
     let item = document.getElementById(id);
     item.innerHTML = "";
@@ -516,7 +545,7 @@ function removeCart(id) {
     showProduct();
 }
 
-// Sub nav
+// Hàm hiển thị menu nổi trên giao diện mobile
 function showNavMobile() {
     let menu = document.getElementById("nav-sub");
     let h = menu.clientHeight;
@@ -525,4 +554,107 @@ function showNavMobile() {
     } else {
         menu.style.display = "none";
     }
+}
+
+
+// Hiển thị thông tin item khi thanh toán
+function showThanhToan(){
+    let pay = document.getElementById("pay");
+    let posArr = new Array();
+    for (let i = 0; i < localStorage.length; i++) {
+        let idx = itemList.findIndex((item) => item.id == localStorage.key(i));
+        if (idx != -1) {
+            posArr.push(idx);
+        }
+    }
+    let total = 0;
+    posArr.forEach((i) => {
+        let num = localStorage.getItem(itemList[i].id);
+        let price = itemList[i].price;
+        total += num * price;
+    });
+    let phuPhi = 12000;
+    pay.innerHTML = 
+    `
+    <div
+        id="pay-item"
+        class="product-info"
+    >
+        
+    </div>
+    <div>
+        <div
+            class="flex justify-between px-6 py-2 border"
+        >
+            <div><span>Tạm tính</span></div>
+            <div class="text-orange-500 font-bold">
+                <span> 129.000 VND </span>
+            </div>
+        </div>
+        <div class="px-6">
+            <p>
+                Áp dụng phí giao hàng đồng giá 15k/đơn
+                đối với đơn hàng có ưu đãi " Mua 1 tặng
+                1 thứ 3 hàng tuần "
+            </p>
+        </div>
+        <div class="flex justify-between px-6 py-2">
+            <div>
+                <span
+                    >Vận chuyển (Giao Hàng Tận
+                    Nơi)</span
+                >
+            </div>
+            <div class="text-orange-500 whitespace-nowrap">${phuPhi} VND</div>
+        </div>
+        <div class="flex justify-between px-6 py-2">
+            <div class="sm:text-2xl font-bold">
+                <span>Tổng cộng</span>
+            </div>
+            <div
+                class="sm:text-2xl font-bold text-orange-500"
+            >
+                <span>${total+phuPhi} VND</span>
+            </div>
+        </div>
+    </div>
+    `;
+    showPayItem();
+}
+
+// Hiển thị item trong localStorage khi thanh toán
+function showPayItem(){
+    let payItem = document.getElementById("pay-item");
+    let posArr = new Array();
+    for (let i = 0; i < localStorage.length; i++) {
+        let idx = itemList.findIndex((item) => item.id == localStorage.key(i));
+        if (idx != -1) {
+            posArr.push(idx);
+        }
+    }
+    let total = 0;
+    posArr.forEach((i) => {
+        let num = localStorage.getItem(itemList[i].id);
+        let price = itemList[i].price;
+        total += num * price;
+    });
+    payItem.innerHTML = posArr
+    .map(
+        (i) => 
+        `
+        <div class="grid grid-cols-4 place-items-center bg-white sm:ml-3">
+            <div class="w-full sm:whitespace-nowrap">${itemList[i].title}</div>
+            <div class="text-orange-500">
+                <span> ${itemList[i].price} </span>
+            </div>
+            <div>${localStorage.getItem(itemList[i].id)}</div>
+            <div class="text-orange-500">
+                <span class="">
+                    ${localStorage.getItem(itemList[i].id)*itemList[i].price} <span>VND</span>
+                </span>
+            </div>
+        </div>
+        `
+    )
+    .join("");
 }
