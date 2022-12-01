@@ -129,7 +129,7 @@
                             >
                         </div>
                     </div>
-                    <div class="animate__animated animate__bounceInRight">
+                    <div class="animate__animated animate__bounceInRight md:flex md:justify-center md:items-center">
                         <a
                             href="./dangNhap.html"
                             class="d-[block] bg-white p-2 rounded hover:opacity-80"
@@ -203,15 +203,15 @@
             </button>
 
             <!-- Phần Nội Dung Sản Phẩm -->
-            <article class="grid sm:grid-flow-col">
+            <article class="grid sm:grid-flow-col md:flex md:flex-col">
                 <!-- Phần Điều Hướng -->
                 <section
-                    class="sm:w-52 w-full font-bold text-lg mr-10 mb-4 pushUp"
+                    class="sm:w-52 md:w-full w-full font-bold text-lg mr-10 mb-4 pushUp"
                 >
                     <p class="text-2xl mb-4 text-center sm:block hidden">
                         DANH MỤC
                     </p>
-                    <div class="rounded-xl overflow-hidden shadow">
+                    <div class="rounded-xl overflow-hidden shadow md:flex">
                         <button
                             id="mon-moi"
                             onclick="showMonMoi()"
@@ -247,10 +247,12 @@
                 <section class="text-center">
                     <div
                         id="item"
-                        class="grid grid-flow-row gap-8 sm:grid-cols-3 grid-cols-1"
+                        class="grid grid-flow-row gap-8 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1"
                     >
                         <!-- Thêm danh sách sản phẩm bằng JS -->
                     </div>
+
+                    <!-- Nút xem thêm -->
                     <button
                         id="btn-more"
                         class="bg-white rounded p-2 font-bold mt-10 hover:scale-105 active:brightness-75 active:scale-100"
