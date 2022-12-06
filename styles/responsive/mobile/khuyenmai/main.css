@@ -61,4 +61,8 @@
     .rows-2 .khuyenmai-title-card h5 {
         font-size: 0.5rem;
     }
+
+    .khuyenmai-items {
+        margin-top: 1rem;
+    }
 }
