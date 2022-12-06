@@ -3,8 +3,9 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding: 7rem 2rem 2rem;
+        padding: 5rem 2rem 2rem;
         height: 100vh;
+        margin-top: 1rem;
     }
 
     .khuyenmai-container > div {
