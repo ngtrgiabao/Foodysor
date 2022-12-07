@@ -588,7 +588,7 @@ function showThanhToan(){
         >
             <div><span>Tạm tính</span></div>
             <div class="text-orange-500 font-bold">
-                <span> 129.000 VND </span>
+                <span> ${total} </span>
             </div>
         </div>
         <div class="px-6">
