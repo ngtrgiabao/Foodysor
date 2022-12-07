@@ -4,7 +4,7 @@
         flex-direction: column;
         justify-content: space-between;
         padding: 5rem 2rem 2rem;
-        height: 100vh;
+        min-height: 100vh;
         margin-top: 1rem;
     }
 
@@ -33,7 +33,7 @@
     }
 
     .khuyenmai-container .card-header span {
-        font-size: 0.3rem;
+        font-size: 0.6rem;
     }
 
     .khuyenmai-container .card-header p {
