@@ -138,7 +138,7 @@ function showProduct() {
             `
         )
         .join("");
-    
+
     // Cập nhật số lượng item trong giỏ
     upNumberCart(countItem());
 
@@ -218,7 +218,7 @@ function showDetail(pos) {
         </button>
     </aside>
     `;
-    
+
     // Cập nhật số lượng vào giỏ hàng
     upNumberCart(countItem());
 
@@ -347,7 +347,7 @@ function showBurger() {
     `
         )
         .join("");
-    
+
     // Ẩn nút xem thêm
     hideBtnMore();
 }
@@ -556,9 +556,8 @@ function showNavMobile() {
     }
 }
 
-
 // Hiển thị thông tin item khi thanh toán
-function showThanhToan(){
+function showThanhToan() {
     let pay = document.getElementById("pay");
     let posArr = new Array();
     for (let i = 0; i < localStorage.length; i++) {
@@ -574,8 +573,7 @@ function showThanhToan(){
         total += num * price;
     });
     let phuPhi = 12000;
-    pay.innerHTML = 
-    `
+    pay.innerHTML = `
     <div
         id="pay-item"
         class="product-info"
@@ -614,7 +612,7 @@ function showThanhToan(){
             <div
                 class="sm:text-2xl font-bold text-orange-500"
             >
-                <span>${total+phuPhi} VND</span>
+                <span>${total + phuPhi} VND</span>
             </div>
         </div>
     </div>
@@ -623,7 +621,7 @@ function showThanhToan(){
 }
 
 // Hiển thị item trong localStorage khi thanh toán
-function showPayItem(){
+function showPayItem() {
     let payItem = document.getElementById("pay-item");
     let posArr = new Array();
     for (let i = 0; i < localStorage.length; i++) {
@@ -639,9 +637,9 @@ function showPayItem(){
         total += num * price;
     });
     payItem.innerHTML = posArr
-    .map(
-        (i) => 
-        `
+        .map(
+            (i) =>
+                `
         <div class="grid grid-cols-4 place-items-center bg-white sm:ml-3">
             <div class="w-full sm:whitespace-nowrap">${itemList[i].title}</div>
             <div class="text-orange-500">
@@ -650,11 +648,13 @@ function showPayItem(){
             <div>${localStorage.getItem(itemList[i].id)}</div>
             <div class="text-orange-500">
                 <span class="">
-                    ${localStorage.getItem(itemList[i].id)*itemList[i].price} <span>VND</span>
+                    ${
+                        localStorage.getItem(itemList[i].id) * itemList[i].price
+                    } <span>VND</span>
                 </span>
             </div>
         </div>
         `
-    )
-    .join("");
+        )
+        .join("");
 }
