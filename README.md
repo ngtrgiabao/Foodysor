@@ -14,4 +14,4 @@
 ## Cấu hình để sử dụng 
 - Cần cài đặt Framework Tailwind để mang đến trải nghiệm tốt nhất.
 
-🌐 Link website: https://ngtrgiabaob2012063.github.io/Foodysor/
+🌐 Link website: https://ngtrgiabao.github.io/Foodysor/
